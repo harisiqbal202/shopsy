@@ -2,8 +2,7 @@ const express = require("express");
 const productRoutes = require("./routes/product.route");
 const userRoutes = require("./routes/user.route");
 const cors = require("cors");
-const mongose = require("mongoose");
-//require("./config/db")();
+require("./config/db.config")();
 
 const app = express();
 
@@ -19,25 +18,6 @@ app.use((req, res, next) => {
   );
   console.log("method: %s url: %s", req.method, req.url);
   next();
-});
-
-mongose.connect(
-  "mongodb+srv://haris_iqbal:clustor@cluster0.7awl2ek.mongodb.net/store",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (err) => {
-    if (err) {
-      console.log("dbErr:", err.message);
-    }
-  }
-);
-
-const connect = mongose.connection;
-
-connect.once("open", () => {
-  console.log("mogoDb connected!");
 });
 
 app.use("/api/v1/user", userRoutes);
