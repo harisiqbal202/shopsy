@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "./../img/onlineshop.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="alert alert-success alert-dismissible fade show">
+      <div className="alert alerclasst-success alert-dismissible fade show">
         <div className="container">
           <p>
             Shop the new arrival now on the spot.
@@ -15,7 +16,7 @@ const Navbar = () => {
           </p>
           <button
             type="button"
-            class="btn-close"
+            className="btn-close"
             data-bs-dismiss="alert"
           ></button>
         </div>
@@ -44,7 +45,7 @@ const Navbar = () => {
                   className="nav-link text-white bg-primary rounded px-3"
                   to="/"
                 >
-                  <i className="fas fa-login"></i>Home
+                  Home
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -63,10 +64,13 @@ const Navbar = () => {
                 </NavLink>
               </li>
             </ul>
-            <div className="buttons">
-              <button type="button" class="btn btn-primary">
-                LOGIN NOW
-              </button>
+            <div className="flex my-2 my-lg-0">
+              <input
+                className="btn btn-primary p-2"
+                type="button"
+                onClick={() => navigate("/login")}
+                value="Login Now"
+              ></input>
               <NavLink to="/" className="btn-blk ms-4">
                 <i className="fas fa-cart-plus"></i> Cart (0)
               </NavLink>

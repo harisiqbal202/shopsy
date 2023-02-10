@@ -1,7 +1,5 @@
-const mongose = require("mongoose");
-const schema = mongose.Schema;
-
-let crud = new schema({
+const mongoose = require("mongoose");
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
     lowercase: true,
@@ -12,7 +10,7 @@ let crud = new schema({
     default: "",
     required: true,
   },
-  password: {
+  contact: {
     type: String,
     default: "",
     required: true,
@@ -20,6 +18,16 @@ let crud = new schema({
   age: {
     type: Number,
     default: 0,
+  },
+  password: {
+    type: String,
+    default: "",
+    required: true,
+  },
+  role: {
+    type: String,
+    default: "",
+    required: true,
   },
   createdAt: {
     type: Date,
@@ -35,4 +43,5 @@ let crud = new schema({
   },
 });
 
-module.exports = mongose.model("user", crud);
+const user = mongoose.model("users", userSchema);
+module.exports = user;

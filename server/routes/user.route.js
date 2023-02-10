@@ -1,7 +1,7 @@
 const {
-  getAllusers,
-  // registeruser,
-  // loginuser,
+  getallusers,
+  registeruser,
+  loginuser,
   singleuser,
   // removeuser,
   // updateuser,
@@ -10,9 +10,9 @@ const {
 const express = require("express");
 const routes = express.Router();
 
-routes.get("", getAllusers);
-// routes.post("/registeruser", registeruser);
-// routes.post("/loginuser", loginuser);
+routes.get("", getallusers);
+routes.post("/registeruser", registeruser);
+routes.post("/loginuser", loginuser);
 routes.put("/:id", singleuser);
 // routes.put("/removeuser/:id", removeuser);
 // routes.put("/updateuser/:id", updateuser);

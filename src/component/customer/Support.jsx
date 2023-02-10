@@ -22,7 +22,7 @@ const Support = () => {
           <div className="col-lg-4">
             <div className="icon_box icon_box_cta">
               <div className="icon">
-                <i class="fa fa-money-bill-alt"></i>
+                <i className="fa fa-money-bill-alt"></i>
               </div>
               <div className="icon_box_content">
                 <h5>10 Day Return</h5>
