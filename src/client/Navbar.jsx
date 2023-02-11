@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="container">
           <p>
             Shop the new arrival now on the spot.
-            <NavLink to="/products" className="rounded mx-2">
+            <NavLink to="/admin" className="rounded mx-2">
               Shop now
             </NavLink>
           </p>

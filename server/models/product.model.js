@@ -5,10 +5,19 @@ const productSchema = new mongoose.Schema({
     lowercase: true,
     default: "",
   },
-  price: {
+  description: {
     type: String,
+    lowercase: true,
     default: "",
-    required: true,
+  },
+  retailp: {
+    type: Number,
+    default: 0,
+  },
+
+  salep: {
+    type: Number,
+    default: 0,
   },
   qty: {
     type: Number,
