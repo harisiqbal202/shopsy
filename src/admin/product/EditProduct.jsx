@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
 import { Col, Container, Row } from "reactstrap";
-import { useGetSingleProductQuery } from "../../Services/product.service";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useParams } from "react-router-dom";
 
 const EditProduct = () => {
   const { id } = useParams();
   console.log(id);
-  const res = useGetSingleProductQuery({ id: 1, name: "apple watch" });
+  // const res = useGetSingleProductQuery({ id: 1, name: "apple watch" });
+  const res = {};
   console.log(res);
   const [product, setProduct] = useState({
-    id: res.data.id,
-    name: res.data.name,
-    description: res.data.description,
-    price: res.data.price,
+    // id: res.data.id,
+    // name: res.data.name,
+    // description: res.data.description,
+    // price: res.data.price,
   });
 
   const handleInputChange = (e) => {
