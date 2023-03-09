@@ -53,6 +53,7 @@ const registeruser = async (req, res) => {
   // if (exist) return res.status(400).send("user already exist");
   // try {
   //   const user = new user({
+
   //     ...rest,
   //   });
   //   const salt = await bcrypt.genSalt(12);
